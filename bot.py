@@ -66,5 +66,5 @@ async def xy(ctx):
     )
     await ctx.respond(embed2)
 
-
-bot.run()
+if __name__ == 'main':
+    bot.run()

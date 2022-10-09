@@ -1,8 +1,10 @@
+from ast import Import
 import lightbulb
 import hikari
 import os
+import secret
 
-TOKEN = os.environ.get("BOT_TOKEN")
+TOKEN = secret.BOT_TOKEN
 bot = lightbulb.BotApp(token=TOKEN, prefix='.', default_enabled_guilds=(1028480665320165486))
 
 if os.name != "nt":

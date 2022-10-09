@@ -5,6 +5,10 @@ import os
 TOKEN = os.environ.get("BOT_TOKEN")
 bot = lightbulb.BotApp(token=TOKEN, prefix='.', default_enabled_guilds=(1028480665320165486))
 
+if os.name != "nt":
+    import uvloop
+
+    uvloop.install()
 
 @bot.command
 @lightbulb.command('info', 'Send the Best Cavalry Equipment')
@@ -66,5 +70,4 @@ async def xy(ctx):
     )
     await ctx.respond(embed2)
 
-if __name__ == 'main':
-    bot.run()
+bot.run()

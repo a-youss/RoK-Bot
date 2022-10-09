@@ -3,7 +3,7 @@ import hikari
 import os
 
 TOKEN = os.environ.get("BOT_TOKEN")
-bot = lightbulb.BotApp(token='MTAyODQ2MTUxOTkyNDYyNTQxMA.GMcSTJ.EaXDZ92hNJ1ME3h7FvKLD1yx8K-Yh-gjj0D66w', prefix='.', default_enabled_guilds=(1028480665320165486))
+bot = lightbulb.BotApp(token=TOKEN, prefix='.', default_enabled_guilds=(1028480665320165486))
 
 
 @bot.command

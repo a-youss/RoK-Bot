@@ -12,6 +12,10 @@ if os.name != "nt":
 
     uvloop.install()
 
+@bot.listen(lightbulb.CommandErrorEvent)
+async def info(event):
+    await event.context.respond('Commander was not found!')
+
 @bot.command
 @lightbulb.command('info', 'Send the Best Cavalry Equipment')
 @lightbulb.implements(lightbulb.PrefixCommand)
@@ -144,5 +148,212 @@ async def alex(ctx):
     )
     await ctx.respond(embed2)
 
+@bot.command
+@lightbulb.command('Amanitore', 'Amanitore Talent Builds', aliases=['Amani', 'amani', 'amanitore'])
+@lightbulb.implements(lightbulb.PrefixCommand)
+async def amani(ctx):
+    embed1 = (
+    hikari.Embed(title="Amanitore", description="Amanitore open field")
+    .set_image(hikari.File('images/Amanitore_OpenField.png'))
+    .set_footer("Brought to you by kingdom 2545")
+    )
+    await ctx.respond(embed1)
+    embed2 = (
+    hikari.Embed(title="Amanitore", description="Amanitore garrison")
+    .set_image(hikari.File('images/Amanitore_Garrison.png'))
+    .set_footer("Brought to you by kingdom 2545")
+    )
+    await ctx.respond(embed2)
+
+
+@bot.command
+@lightbulb.command('Artemisia', 'Artemisia Talent Builds', aliases=['Arte', 'arte', 'artemisia', 'arti', 'Arti'])
+@lightbulb.implements(lightbulb.PrefixCommand)
+async def arte(ctx):
+    embed1 = (
+    hikari.Embed(title="Artemisia", description="Artemisia open field")
+    .set_image(hikari.File('images/Artemisia_TankyOpenField.png'))
+    .set_footer("Brought to you by kingdom 2545")
+    )
+    await ctx.respond(embed1)
+    embed2 = (
+    hikari.Embed(title="Artemisia", description="Artemisia garrison")
+    .set_image(hikari.File('images/Artemisia_Garrison.png'))
+    .set_footer("Brought to you by kingdom 2545")
+    )
+    await ctx.respond(embed2)
+
+@bot.command
+@lightbulb.command('Attila', 'Attila Talent Builds', aliases=['At', 'at', 'AT', 'attila'])
+@lightbulb.implements(lightbulb.PrefixCommand)
+async def attila(ctx):
+    embed1 = (
+    hikari.Embed(title="Attila", description="Attila open field")
+    .set_image(hikari.File('images/Attila_OpenField_InOut.png'))
+    .set_footer("Brought to you by kingdom 2545")
+    )
+    await ctx.respond(embed1)
+    embed2 = (
+    hikari.Embed(title="Attila", description="Attila Takeda rally")
+    .set_image(hikari.File('images/Attila_GenericRally.png'))
+    .set_footer("Brought to you by kingdom 2545")
+    )
+    await ctx.respond(embed2)
+    embed3 = (
+    hikari.Embed(title="Attila", description="Attila Nevsky rally")
+    .set_image(hikari.File('images/AttilaNevRally.png'))
+    .set_footer("Brought to you by kingdom 2545")
+    )
+    await ctx.respond(embed3)
+
+@bot.command
+@lightbulb.command('JC', 'Caesar Talent Builds', aliases=['jc', 'Jc', 'Caesar', 'caesar', 'Julius', 'julius'])
+@lightbulb.implements(lightbulb.PrefixCommand)
+async def JC(ctx):
+    embed = (
+    hikari.Embed(title="Juilus Caesar", description="Caesar mixed troops rally build")
+    .set_image(hikari.File('images/Caesar_MixTroopsRally.png'))
+    .set_footer("Brought to you by kingdom 2545")
+    )
+    await ctx.respond(embed)
+
+@bot.command
+@lightbulb.command('CC', 'Cao Cao Talent Builds', aliases=['Caocao', 'Cc', 'cc', 'caocao', 'cao', 'Cao'])
+@lightbulb.implements(lightbulb.PrefixCommand)
+async def CC(ctx):
+    embed = (
+    hikari.Embed(title="Cao Cao", description="Cao Cao speed build")
+    .set_image(hikari.File('images/Cao-Cao_SpeedyTalents.png'))
+    .set_footer("Brought to you by kingdom 2545")
+    )
+    await ctx.respond(embed)
+
+@bot.command
+@lightbulb.command('Chandra', 'Chandra Gupta Talent Builds', aliases=['chandra', 'Gupta', 'gupta'])
+@lightbulb.implements(lightbulb.PrefixCommand)
+async def Chandra(ctx):
+    embed1 = (
+    hikari.Embed(title="Chandra Gupta", description="Chandra Gupta open field")
+    .set_image(hikari.File('images/Chandragupta_Field.png'))
+    .set_footer("Brought to you by kingdom 2545")
+    )
+    await ctx.respond(embed1)
+    embed2 = (
+    hikari.Embed(title="Chandra Gupta", description="Chandra Gupta rally")
+    .set_image(hikari.File('images/Chandragupta_Rally.png'))
+    .set_footer("Brought to you by kingdom 2545")
+    )
+    await ctx.respond(embed2)
+
+@bot.command
+@lightbulb.command('Charlemagne', 'Charlemagne Talent Builds', aliases=['charlemagne'])
+@lightbulb.implements(lightbulb.PrefixCommand)
+async def Charlemagne(ctx):
+    embed = (
+    hikari.Embed(title="Charlemagne", description="Charlemagne rally")
+    .set_image(hikari.File('images/Charlemagne_Rally.png'))
+    .set_footer("Brought to you by kingdom 2545")
+    )
+    await ctx.respond(embed)
+
+@bot.command
+@lightbulb.command('CM', 'Charles Martel Talent Builds', aliases=['cm', 'Cm', 'Charles', 'charles', 'Martel', 'martel'])
+@lightbulb.implements(lightbulb.PrefixCommand)
+async def CM(ctx):
+    embed1 = (
+    hikari.Embed(title="Charles Martel", description="Charles Martel open field")
+    .set_image(hikari.File('images/Charles-Martel_Field.png'))
+    .set_footer("Brought to you by kingdom 2545")
+    )
+    await ctx.respond(embed1)
+    embed2 = (
+    hikari.Embed(title="Charles Martel", description="Charles Martel garrison")
+    .set_image(hikari.File('images/Charles-Martel_Garrison.png'))
+    .set_footer("Brought to you by kingdom 2545")
+    )
+    await ctx.respond(embed2)
+
+@bot.command
+@lightbulb.command('Cheok', 'Cheok Talent Builds', aliases=['cheok', 'cj', 'Cj', 'CJ'])
+@lightbulb.implements(lightbulb.PrefixCommand)
+async def CJ(ctx):
+    embed = (
+    hikari.Embed(title="Cheok Jun-gyeong", description="Cheok Jun-gyeong open field")
+    .set_image(hikari.File('images/Cheok_OpenField.png'))
+    .set_footer("Brought to you by kingdom 2545")
+    )
+    await ctx.respond(embed)
+
+@bot.command
+@lightbulb.command('Cleopatra', 'Cleopatra Talent Builds', aliases=['cleopatra', 'Cleo', 'cleo'])
+@lightbulb.implements(lightbulb.PrefixCommand)
+async def CJ(ctx):
+    embed = (
+    hikari.Embed(title="Cleopatra", description="Cleopatra gathering")
+    .set_image(hikari.File('images/Cleopatra_Gathering.png'))
+    .set_footer("Brought to you by kingdom 2545")
+    )
+    await ctx.respond(embed)
+
+@bot.command
+@lightbulb.command('Constantine', 'Constantine Talent Builds', aliases=['constantine', 'Connie', 'connie'])
+@lightbulb.implements(lightbulb.PrefixCommand)
+async def Constantine(ctx):
+    embed1 = (
+    hikari.Embed(title="Constantine", description="Constantine open field")
+    .set_image(hikari.File('images/Constantine_OpenField.png'))
+    .set_footer("Brought to you by kingdom 2545")
+    )
+    await ctx.respond(embed1)
+    embed2 = (
+    hikari.Embed(title="Constantine", description="Constantine garrison")
+    .set_image(hikari.File('images/Constantine_GarrisonGeneric.png'))
+    .set_footer("Brought to you by kingdom 2545")
+    )
+    await ctx.respond(embed2)
+
+@bot.command
+@lightbulb.command('Cyrus', 'Cyrus Talent Builds', aliases=['cyrus'])
+@lightbulb.implements(lightbulb.PrefixCommand)
+async def Cyrus(ctx):
+    embed = (
+    hikari.Embed(title="Cyrus The Great", description="Cyrus universal")
+    .set_image(hikari.File('images/Cyrus_OpenFieldRally.png'))
+    .set_footer("Brought to you by kingdom 2545")
+    )
+    await ctx.respond(embed)
+
+@bot.command
+@lightbulb.command('Edward', 'Edward Talent Builds', aliases=['edward', 'Ed', 'ed'])
+@lightbulb.implements(lightbulb.PrefixCommand)
+async def Cyrus(ctx):
+    embed = (
+    hikari.Embed(title="Edward of Woodstock", description="Edward openfield")
+    .set_image(hikari.File('images/Edward_OpenFieldTomy.png'))
+    .set_footer("Brought to you by kingdom 2545")
+    )
+    await ctx.respond(embed)
+
+@bot.command
+@lightbulb.command('Cid', 'El Cid Talent Builds', aliases=['cid'])
+@lightbulb.implements(lightbulb.PrefixCommand)
+async def Cyrus(ctx):
+    embed = (
+    hikari.Embed(title="El Cid", description="El Cid universal build")
+    .set_image(hikari.File('images/El-Cid_Universal.png'))
+    .set_footer("Brought to you by kingdom 2545")
+    )
+    await ctx.respond(embed)
+
+@bot.command
+@lightbulb.command('Flavius', 'El Cid Talent Builds', aliases=['Flav', 'flav', 'flavious'])
+@lightbulb.implements(lightbulb.PrefixCommand)
+async def Cyrus(ctx):
+    embed = (
+    hikari.Embed(title="Flavius", description="Flavius garrison")
+    .set_image(hikari.File('images/Flavius_Garrison.png'))
+    .set_footer("Brought to you by kingdom 2545")
+    )
+    await ctx.respond(embed)
 
 bot.run()

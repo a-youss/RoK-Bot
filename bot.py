@@ -812,4 +812,26 @@ async def Henry(ctx):
     )
     await ctx.respond(embed)
 
+@bot.command
+@lightbulb.command('Tariq', 'Tariq Ibn Ziyad Talent Builds', aliases=['tariq'])
+@lightbulb.implements(lightbulb.PrefixCommand)
+async def sargon(ctx):
+    embed = (
+    hikari.Embed(title="Tariq Ibn Ziyad", description="Tariq Ibn Ziyad Rally")
+    .set_image(hikari.File('images/Sargon.png'))
+    .set_footer("Brought to you by kingdom 2545")
+    )
+    await ctx.respond(embed)
+
+@bot.command
+@lightbulb.command('Sargon', 'Sargon The Geat Talent Builds', aliases=['sargon'])
+@lightbulb.implements(lightbulb.PrefixCommand)
+async def sargon(ctx):
+    embed = (
+    hikari.Embed(title="Sargon The Geat", description="Sargon The Geat Universal")
+    .set_image(hikari.File('images/Sargon.png'))
+    .set_footer("Brought to you by kingdom 2545")
+    )
+    await ctx.respond(embed)
+
 bot.run()
